@@ -3,18 +3,15 @@ const mongoose = require("mongoose");
 const createProperty = mongoose.Schema({
       name: {
             type: String,
-            trim: true,
-            required: true,
+            trim: true
       },
       property_image: {
             type: String,
-            trim: true,
-            required: true,
+            trim: true
       },
       period: {
             type: String,
-            trim: true,
-            required: true,
+            trim: true
       },
       description: {
             type: String,
@@ -22,68 +19,55 @@ const createProperty = mongoose.Schema({
       },
       purpose: {
             type: String,
-            trim: true,
-            required: true,
+            trim: true
       },
       property_type: {
             type: String,
-            trim: true,
-            required: true,
+            trim: true
       },
       revenue_type: {
             type: String,
-            trim: true,
-            required: true,
+            trim: true
       },
       measure_unit: {
             type: String,
-            trim: true,
-            required: true,
+            trim: true
       },
       capture_area: {
             type: String,
-            trim: true,
-            required: true,
+            trim: true
       },
       total_area: {
             type: String,
-            trim: true,
-            required: true,
+            trim: true
       },
       year_built: {
             type: String,
-            trim: true,
-            required: true,
+            trim: true
       },
       hand_over: {
             type: String,
-            trim: true,
-            required: true,
+            trim: true
       },
       pets_allowed: {
             type: Boolean,
-            trim: true,
-            required: true,
+            trim: true
       },
       mobile_number: {
             type: Number,
-            trim: true,
-            required: true,
+            trim: true
       },
       mobile_number_country_code: {
             type: Number,
-            trim: true,
-            required: true,
+            trim: true
       },
       email: {
             type: String,
-            trim: true,
-            required: true,
+            trim: true
       },
       website: {
             type: String,
-            trim: true,
-            required: true,
+            trim: true
       },
       created_date: {
             type: Date,
@@ -93,10 +77,49 @@ const createProperty = mongoose.Schema({
             type: Array,
             trim: true,
       },
+      door_no: {
+            type: String,
+            trim: true,
+      },
+      address_line1: {
+            type: String,
+            trim: true,
+      },
+      address_line2: {
+            type: String,
+            trim: true,
+      },
+      landmark: {
+            type: String,
+            trim: true,
+      },
+      district: {
+            type: String,
+            trim: true,
+      },
+      state: {
+            type: String,
+            trim: true,
+      },
+      country: {
+            type: String,
+            trim: true,
+      },
+      pincode: {
+            type: String,
+            trim: true,
+      },
+      latitude: {
+            type: String,
+            trim: true
+      },
+      longitude: {
+            type: String,
+            trim: true
+      },
       user_id: {
             type: mongoose.Schema.ObjectId,
-            ref: "user",
-            required: true,
+            ref: "user"
       },
 });
 createProperty.virtual("user", {

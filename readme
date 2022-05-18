@@ -1,0 +1,18 @@
+// get all by post method
+router.post("/getprofile", async (req, res) => {
+      if (!req.body.id) {
+            return res.json({ error: "Please Provide a id" })
+      }
+      const property = await Profiledata.PropertyData({ _id: req.body.id })
+      res.json(property);
+
+});
+// get all by get method
+router.get("/get_propertyBy_user", async (req, res) => {
+      if (!req.query.id) {
+            return res.json({ error: "Please Provide a id" })
+      }
+      const user_id = req.query.id
+      const users = await PropertyData.find({ user_id })
+      res.json(users);
+});
