@@ -31,7 +31,7 @@ app.listen(port, () => {
 
 //db connection
 mongoose.connect(
-  "mongodb://localhost/app",
+  "mongodb+srv://prasath:8667726969@cluster0.vf1wb.mongodb.net/?retryWrites=true&w=majority",
   { useNewUrlParser: true, useUnifiedTopology: true },
   (err) => {
     if (!err) {
