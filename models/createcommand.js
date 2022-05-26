@@ -13,13 +13,13 @@ const commandProperty = mongoose.Schema({
             type: String,
             default: Date.now,
       },
-      property_id: {
+      property_id: [{
             type: mongoose.Schema.ObjectId,
-            ref: "commands"
-      },
+            ref: "properties"
+      }],
 });
 commandProperty.virtual("commands", {
-      ref: "commands",
+      ref: "properties",
       localField: "property_id",
       foreignField: "_id",
 });

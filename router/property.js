@@ -87,7 +87,7 @@ router.put("/update/property", async (req, res) => {
 });
 // get all property
 router.get("/get/all/property", async (req, res) => {
-      var data = await PropertyData.find().select(['name', 'description', 'property_type']);
+      var data = await CommandData.find().populate("commands");
       res.json(data)
 });
 

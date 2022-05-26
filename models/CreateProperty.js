@@ -127,4 +127,10 @@ createProperty.virtual("user", {
       localField: "user_id",
       foreignField: "_id",
 });
+createProperty.virtual("commands", {
+      ref: "command",
+      localField: "_id",
+      foreignField: "property_id",
+});
+
 module.exports = mongoose.model("properties", createProperty);

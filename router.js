@@ -69,8 +69,8 @@ router.post("/register", async (req, res) => {
       name: req.body.name,
       email: req.body.email,
       password: hash,
+      profileimage:req.profileimage
     });
-    console.log(hash);
     await data.save();
     res
       .status(200)
@@ -112,4 +112,11 @@ router.delete("/delete", async (req, res) => {
   res.json(delData);
 });
 
+
+
+// get all users
+router.get("/get/all/users", async (req, res) => {
+  var data = await User.find().select(['_id',"name"])
+  res.json(data)
+});
 module.exports = router;
